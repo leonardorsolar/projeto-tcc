@@ -2,6 +2,73 @@
 
 > **Objetivo**: Workflow multi-agent
 
+## 📋 Projeto - API Node.js Express
+
+API simples em Node.js com Express contendo uma rota GET que retorna "Hello World".
+
+### 📦 Requisitos
+
+- **Node.js**: >= 20.0.0
+- **npm**: >= 10.0.0
+
+### 🚀 Instalação
+
+```bash
+npm install
+```
+
+### 🏃 Execução
+
+**Modo Produção:**
+```bash
+npm start
+```
+
+**Modo Desenvolvimento (com auto-reload):**
+```bash
+npm run dev
+```
+
+O servidor estará disponível em `http://localhost:3000`
+
+### 🔌 Rotas Disponíveis
+
+**GET /**
+- Descrição: Retorna mensagem de Hello World
+- Resposta: `{ "message": "Hello World" }`
+- Exemplo:
+```bash
+curl http://localhost:3000/
+```
+
+### ⚙️ Configuração
+
+**Porta do Servidor:**
+- Padrão: 3000
+- Customização: Use a variável de ambiente `PORT`
+```bash
+PORT=8080 npm start
+```
+
+### 📁 Estrutura do Projeto
+
+```
+/
+├── src/
+│   ├── app.js            # Configuração Express e rotas
+│   └── server.js         # Ponto de entrada (listen)
+├── plan/
+│   └── plan_issue0001.md # Plano de implementação
+├── package.json          # Configuração do projeto Node.js
+├── .gitignore           # Arquivos ignorados pelo Git
+├── README.md            # Documentação
+├── sonar-project.properties  # Configuração SonarCloud
+└── .github/
+    └── workflows/
+        └── build.yml     # Pipeline CI/CD
+```
+
+---
 
 Pipeline ideal de qualidade:
 Lint
@@ -18,9 +85,7 @@ Merge
 
 ```bash
 # 1. Baixe a pasta .prompts e Readme na raiz do projeto contendo os prompts (skills)
-# 2. Na raiz do projeto crie um index.js e dentro dele insira:
-console.log('Hello, World!');
-# 3. Crie no github um novo projeto. crie um novo repositório.
+# 2. Crie no github um novo projeto. crie um novo repositório.
 Repositories > New > nome do projeto > create Repository
 git init > git add . > git commit -m "first commit" > 
 git branch -M main > git remote add origin https:... > 
