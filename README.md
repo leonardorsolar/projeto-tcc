@@ -41,6 +41,31 @@ O servidor estará disponível em `http://localhost:3000`
 curl http://localhost:3000/
 ```
 
+**GET /health**
+- Descrição: Health check endpoint para monitoramento
+- Resposta: `{ "status": "ok", "timestamp": "ISO-8601", "uptime": number }`
+- Exemplo:
+```bash
+curl http://localhost:3000/health
+```
+
+### 🧪 Testes
+
+**Executar testes:**
+```bash
+npm test
+```
+
+**Executar testes em modo watch:**
+```bash
+npm run test:watch
+```
+
+**Gerar relatório de cobertura:**
+```bash
+npm run test:coverage
+```
+
 ### ⚙️ Configuração
 
 **Porta do Servidor:**
@@ -48,6 +73,14 @@ curl http://localhost:3000/
 - Customização: Use a variável de ambiente `PORT`
 ```bash
 PORT=8080 npm start
+```
+
+**Modo de Execução:**
+- Padrão: development
+- Valores aceitos: `development`, `production`, `test`
+- Em produção, mensagens de erro são ocultadas por segurança
+```bash
+NODE_ENV=production npm start
 ```
 
 ### 📁 Estrutura do Projeto
