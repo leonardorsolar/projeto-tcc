@@ -7,8 +7,8 @@ if (!['development', 'production', 'test'].includes(NODE_ENV)) {
 }
 
 // Validação e configuração da porta
-const PORT = parseInt(process.env.PORT, 10) || 3000;
-if (isNaN(PORT) || PORT < 0 || PORT > 65535) {
+const PORT = Number.parseInt(process.env.PORT, 10) || 3000;
+if (Number.isNaN(PORT) || PORT < 0 || PORT > 65535) {
   throw new Error(`Invalid PORT value: ${process.env.PORT}`);
 }
 
